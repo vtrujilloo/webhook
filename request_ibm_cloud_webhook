@@ -1,0 +1,63 @@
+{
+   "timestamp":1650527400000000,
+   "timespan":600000000,
+   "alert":{
+      "severity":4,
+      "editUrl":"https://eu-de.monitoring.cloud.ibm.com:443/api/oauth/openid/IBM/8a2a9e30e7fe4f5dafe3487bc14be923/956ee29f-6000-4864-b07d-7a1c8142511c?redirectRoute=%2Falerts%2F404042",
+      "severityLabel":"Low",
+      "subject":"Container Unhealthy alert is Triggered",
+      "scope":"kubernetes.namespace.name = 'ibm-system' and kubernetes.pod.name = 'catalog-operator-768df85f55-w75hh'",
+      "name":"Container Unhealthy alert",
+      "description":"None",
+      "id":404042,
+      "body":"Container Unhealthy alert is Triggered\n\n\nEvent Generated:\n\nSeverity:         Low\nCondition:\n    count(customEvent) > 0\nScope:\n    kubernetes.pod.name = 'catalog-operator-768df85f55-w75hh'\n    kubernetes.namespace.name = 'ibm-system'\n\nTime:             04/21/2022 07:50 AM UTC\nState:            Triggered\nNotification URL: https://eu-de.monitoring.cloud.ibm.com:443/api/oauth/openid/IBM/8a2a9e30e7fe4f5dafe3487bc14be923/956ee29f-6000-4864-b07d-7a1c8142511c?redirectRoute=%2Fevents%2Fnotifications%2Fl%3A2419200%2F16049409%2Fevents\n\n------\n\nTriggered by Alert:\n\nType:         Event Based\nName:         Container Unhealthy alert\nTeam:         Monitor Operations\nScope:\n    kubernetes.pod.name = 'catalog-operator-768df85f55-w75hh'\n    kubernetes.namespace.name = 'ibm-system'\nWhen:         Total number of custom events > 0\nFor at least: 10 m\nAlert URL:    https://eu-de.monitoring.cloud.ibm.com:443/api/oauth/openid/IBM/8a2a9e30e7fe4f5dafe3487bc14be923/956ee29f-6000-4864-b07d-7a1c8142511c?redirectRoute=%2Falerts%2F404042\n\n\n",
+      "defaultSettings":[
+         {
+            "options":{
+               "notifyOnResolve":true,
+               "notifyOnOk":true,
+               "url":"https://c45d-46-25-207-43.eu.ngrok.io/hooktest",
+               "customData":{
+                  "centro":"IBM CLoud",
+                  "system":"prueba"
+               },
+               "additionalHeaders":{
+
+               },
+               "allowInsecureConnections":false
+            },
+            "type":"WEBHOOK",
+            "notificationChannelId":38684
+         }
+      ]
+   },
+   "event":{
+      "id":16049409,
+      "url":"https://eu-de.monitoring.cloud.ibm.com:443/api/oauth/openid/IBM/8a2a9e30e7fe4f5dafe3487bc14be923/956ee29f-6000-4864-b07d-7a1c8142511c?redirectRoute=%2Fevents%2Fnotifications%2Fl%3A604800%2F16049409%2Fdetails"
+   },
+   "customData":{
+      "centro":"IBM CLoud",
+      "system":"prueba"
+   },
+   "state":"ACTIVE",
+   "entities":[
+      {
+         "entity":"kubernetes.namespace.name = 'ibm-system' and kubernetes.pod.name = 'catalog-operator-768df85f55-w75hh'",
+         "metricValues":[
+            {
+               "metric":"customEvent",
+               "aggregation":"count",
+               "groupAggregation":"none",
+               "value":3
+            }
+         ],
+         "additionalInfo":"None"
+      }
+   ],
+   "condition":"count(customEvent) > 0",
+   "source":"Sysdig Cloud",
+   "labels":{
+      "kubernetes.namespace.name":"ibm-system",
+      "kubernetes.pod.name":"catalog-operator-768df85f55-w75hh"
+   }
+}
